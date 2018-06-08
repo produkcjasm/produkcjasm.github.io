@@ -7,61 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="customSM.css">
   <title>Strona testowa</title>
-  <style>
-#smPopupContainer {
-  border: none !important;
-  box-shadow: none !important;
-  background: transparent !important;
-}
-
-#smPopupBackground {
-  opacity: 0.7 !important;
-}
-
-#salesmanagoIframe {
-  background: transparent !important;
-}
-
-#popupContainer {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-@media all and (max-width: 800px) {
-  #smPopupContainer {
-    width: 100% !important;
-    max-width: 400px !important;
-  }
-
-  #PopupContainer {
-    width: 100% !important;
-    max-width: 400px !important;
-    height: 800px !important;
-  }
-
-  #salesmanagoIframe {
-    background: transparent !important;
-  }
-
-  .wrapper-global {
-    max-width: 400px !important;
-  }
-}
-
-
-
-  </style>
 </head>
 
 <body style="background-color: black; height: 100%">
     <div style="color:white; height: 199px;">
- edit 1
+ edit 2
   </div>
   
   
-  <div class="modal closeBtnSM">
-    <div class="modal__inner">
+ <div class="modalSM closeBtnSM">
+    <div class="modalSM__inner">
       <a class="closeSMbtn closeBtnSM">X</a>
       <iframe class="smIframe" src="https://app2.emlgrid.com/cf/36ah1dxt6fpehf53/co_dalej.htm" frameborder="0"></iframe>
     </div>
@@ -74,17 +29,17 @@
   <script>
     const closeBtn = document.querySelectorAll('.closeBtnSM'),
       popupToggler = document.querySelector('#toggler'),
-      modal = document.querySelector('.modal');
+      modal = document.querySelector('.modalSM');
 
     popupToggler.addEventListener('click', () => {
-      modal.classList.add('animateToDown');
-      modal.classList.remove('animateToTop');
+      modal.classList.add('animateToDownSM');
+      modal.classList.remove('animateToTopSM');
     })
 
     closeBtn.forEach((e) => {
       e.addEventListener('click', () => {
-        modal.classList.remove('animateToDown');
-        modal.classList.add('animateToTop');
+        modal.classList.remove('animateToDownSM');
+        modal.classList.add('animateToTopSM');
       })
     })
   </script>
