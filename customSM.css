@@ -1,121 +1,40 @@
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+#smPopupContainer {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
 }
 
-/* modal */
-
-.modalSM {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(122, 122, 122, 0.7);
-  margin: 0 auto;
-  position: fixed;
-  top: -150vh;
+#smPopupBackground {
+  opacity: 0.7 !important;
 }
 
-.modalSM__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 790px;
-  height: 477px;
+#salesmanagoIframe {
+  background: transparent !important;
 }
 
-@-webkit-keyframes animateDownSM {
-  from {
-    top: -150vh;
-    opacity: 0;
+#popupContainer {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+@media all and (max-width: 800px) {
+  #smPopupContainer {
+    width: 100% !important;
+    max-width: 400px !important;
   }
-  to {
-    top: 0;
-    opacity: 1;
+
+  #PopupContainer {
+    width: 100% !important;
+    max-width: 400px !important;
+    height: 800px !important;
   }
-}
 
-@keyframes animateDownSM {
-  from {
-    top: -150vh;
-    opacity: 0;
+  #salesmanagoIframe {
+    background: transparent !important;
   }
-  to {
-    top: 0;
-    opacity: 1;
+
+  .wrapper-global {
+    max-width: 400px !important;
   }
-}
-
-@-webkit-keyframes animateUpSM {
-  from {
-    top: 0;
-    opacity: 1;
-  }
-  to {
-    top: -150vh;
-    opacity: 0;
-  }
-}
-
-@keyframes animateUpSM {
-  from {
-    top: 0;
-    opacity: 1;
-  }
-  to {
-    top: -150vh;
-    opacity: 0;
-  }
-}
-
-.animateToTopSM {
-  -webkit-animation-name: animateUpSM;
-  -webkit-animation-duration: 0.5s;
-  animation-name: animateUpSM;
-  animation-duration: 0.5s;
-  top: -150vh;
-}
-
-.animateToDownSM {
-  -webkit-animation-name: animateDownSM;
-  -webkit-animation-duration: 0.5s;
-  animation-name: animateDownSM;
-  animation-duration: 0.5s;
-  top: 0px;
-}
-
-.smIframe {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  max-width: 790px;
-  height: 477px;
-  margin-right: 12px;
-}
-
-.closeSMbtn {
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  position: relative;
-  left: 93%;
-  top: 20px;
-  z-index: 99;
-  text-decoration: none;
-  color: #666;
-}
-
-.closeSMbtn:visited {
-  color: #666;
 }
