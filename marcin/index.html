@@ -59,10 +59,10 @@
   
   <script src="https://app2.salesmanago.pl/dynamic/36ah1dxt6fpehf53/popups.js"></script>
   <script>
-    let smPopupContainer = document.body.childNodes[0];
+    let smPopupContainer = document.body.firstChild;
     let smPopupContainerNewPlace = document.querySelectorAll('.main-content')[2];
 
-    document.insertBefore(smPopupContainer, smPopupContainerNewPlace);
+    document.body.insertBefore(smPopupContainer, smPopupContainerNewPlace);
   </script>
 </body>
 </html>
