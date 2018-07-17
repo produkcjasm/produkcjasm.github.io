@@ -8,37 +8,7 @@
 </head>
 <body onLoad="smFormIdUpdate()" style="background-color: rgb(51, 114, 26)">
   <script src="https://app2.salesmanago.pl/dynamic/36ah1dxt6fpehf53/popups.js"></script>
-  <script>
-  function smGetItemValue(itemString, valueSeparator) {
-      return itemString.substring(itemString.indexOf(valueSeparator) + 1);
-  }
-
-  function smReadValueFromString(itemsString, requestedKey, itemSeparator, valueSeparator) {
-      var items = itemsString.split(itemSeparator);
-      for (var i = 0; i < items.length; i++) {
-          var itemString = items[i].trim();
-          if (itemString.startsWith(requestedKey))
-              return smGetItemValue(itemString, valueSeparator)
-      }
-      return "";
-  }
-
-  function smReadCookie(cookieName) {
-      return smReadValueFromString(document.cookie, cookieName, ";", "=");
-  }
-
-  function smFormIdUpdate() {
-
-
-      var id = smReadCookie('smclient')
-      if (id.length > 0) {
-          var data = document.getElementById("salesmanagoIframe");
-          data.src = data.src + '?contactId=' + id;
-      }
-  }
-
-
-</script>
+  
    <script type="text/javascript">
     var _smid = '36ah1dxt6fpehf53';
     (function (w, r, a, sm, s) {
