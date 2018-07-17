@@ -24,10 +24,10 @@
   </script> 
   
   <script>
-    function smGetItemValue(itemString, valueSeparator) {
+        function smGetItemValue(itemString, valueSeparator) {
         return itemString.substring(itemString.indexOf(valueSeparator) + 1);
     }
-  
+
     function smReadValueFromString(itemsString, requestedKey, itemSeparator, valueSeparator) {
         var items = itemsString.split(itemSeparator);
         for (var i = 0; i < items.length; i++) {
@@ -37,20 +37,27 @@
         }
         return "";
     }
-  
+
     function smReadCookie(cookieName) {
         return smReadValueFromString(document.cookie, cookieName, ";", "=");
     }
-  
-    function smFormIdUpdate() {
-  
-  
+
         var id = smReadCookie('smclient')
         if (id.length > 0) {
             var data = document.getElementById("salesmanagoIframe");
-            data.src = data.src + '?contactId=' + id;
+            if(data!==null)
+            {
+                 var uuid = data.src + '?contactId=' + id;
+
+var changeIframeSrc = function(iframe, src) {
+    var frame = iframe.cloneNode();
+    frame.src = src;
+    iframe.parentNode.replaceChild(frame, iframe);
+};
+changeIframeSrc(data,uuid)
+            }
         }
-    }
+
   
   </script>
   
