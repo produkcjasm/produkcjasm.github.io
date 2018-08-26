@@ -6,31 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Piotrek</title>
-  <style>
-    * {
-      margin:0;
-      padding: 0;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
-<body style="background-color: rgb(51, 114, 26)">
-  <div id="smb_2159"></div>
-  <div style="max-width: 1280px; height: 32.85vw; position:relative" id="test">
-    <iframe id="salesmanagoIframe" style="margin: 0; padding: 0; width:1285px; height:100%; overflow-y:hidden; overflow-x:hidden; border:none; background:pink;max-width:100%;"
-      src="https://app2.emlgrid.com/ms/36ah1dxt6fpehf53/default/Swipers_gonna_Swipe.htm"></iframe>
-  </div>
+<body>
+ <div class="testing">
+   Some github testing by the night
+
+ </div>
   <script>
     window.addEventListener("resize", function (e) {
       var mapElement = document.getElementById("test");
       mapElement.style.height = mapElement.offsetWidth * 0.3125;
     });
-  </script>
-  <script>
-    let test = "2";
-
-
-  </script>
+  </script> 
   <script src="https://app2.salesmanago.pl/dynamic/36ah1dxt6fpehf53/popups.js"></script>
 
   <script type="text/javascript">
@@ -46,45 +35,6 @@
     })(window, 'sm', ('https:' == document.location.protocol ? 'https://' : 'http://')
       + 'app2.salesmanago.pl/static/sm.js');
   </script>
-
-  <script>
-    function smGetItemValue(itemString, valueSeparator) {
-      return itemString.substring(itemString.indexOf(valueSeparator) + 1);
-    }
-
-    function smReadValueFromString(itemsString, requestedKey, itemSeparator, valueSeparator) {
-      var items = itemsString.split(itemSeparator);
-      for (var i = 0; i < items.length; i++) {
-        var itemString = items[i].trim();
-        if (itemString.startsWith(requestedKey))
-          return smGetItemValue(itemString, valueSeparator)
-      }
-      return "";
-    }
-
-    function smReadCookie(cookieName) {
-      return smReadValueFromString(document.cookie, cookieName, ";", "=");
-    }
-
-    var id = smReadCookie('smclient')
-    if (id.length > 0) {
-      var data = document.getElementById("salesmanagoIframe");
-      if (data !== null) {
-        var uuid = data.src + '?contactId=' + id;
-
-        var changeIframeSrc = function (iframe, src) {
-          var frame = iframe.cloneNode();
-          frame.src = src;
-          iframe.parentNode.replaceChild(frame, iframe);
-        };
-        changeIframeSrc(data, uuid)
-      }
-    }
-
-
-  </script>
-
-
 
 </body>
 
