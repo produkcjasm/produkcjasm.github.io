@@ -3,3 +3,8 @@ function wellBeTesting () {
 }
 
 wellBeTesting();
+
+function getPrompt () {
+  prompt('Say something!')
+
+}

@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Pirata+One');
-
 * {
   margin: 0;
   padding: 0;
@@ -16,18 +15,19 @@ body {
   height: 100vh;
 }
 
-.testing {  
+.testing {
   background-color: #ffffff;
   width: 50vw;
   height: 50vh;
   font-family: 'Pirata One', cursive;
   text-align: center;
+  border-radius: 4px;
   color: #000000;
   font-size: 200%;
   display: flex;
   align-items: center;
   justify-content: center;
-  -webkit-box-shadow: 3px 3px 5px 0px rgba(255,171,255,0.55);
--moz-box-shadow: 3px 3px 5px 0px rgba(255,171,255,0.55);
-box-shadow: 3px 3px 5px 0px rgba(255,171,255,0.55);
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(255, 171, 255, 0.55);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(255, 171, 255, 0.55);
+  box-shadow: 3px 3px 5px 0px rgba(255, 171, 255, 0.55);
 }
