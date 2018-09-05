@@ -61,6 +61,12 @@
     <div></div>
   </div>
   <script src="https://app2.salesmanago.pl/dynamic/36ah1dxt6fpehf53/popups.js"></script>
+  <script>
+  window.addEventListener("load", function(event) {
+    document.getElementById("salesmanagoIframe").setAttribute("allow", "geolocation"); 
+    console.log("done");
+  });
+</script>
   
 </body>
 
