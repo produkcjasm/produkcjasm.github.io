@@ -1,8 +1,8 @@
-function wellBeTesting () {
-  alert('Hello darkness my old friend');
-}
+// function wellBeTesting () {
+//   alert('Hello darkness my old friend');
+// }
 
-wellBeTesting();
+// wellBeTesting();
 
 function getPrompt () {
   prompt('Say something!')
