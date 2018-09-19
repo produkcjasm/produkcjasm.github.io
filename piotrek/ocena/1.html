@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="produkcjaSM">
+  <title>Test adrenaline</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0
+    }
+
+    body {
+      background-color: aqua;
+    }
+  </style>
+</head>
+<script src="https://app2.salesmanago.pl/dynamic/36ah1dxt6fpehf53/popups.js"></script>
+
+<script type="text/javascript">
+  var _smid = '36ah1dxt6fpehf53';
+  var _smbanners = true;
+  (function (w, r, a, sm, s) {
+    w['SalesmanagoObject'] = r;
+    w[r] = w[r] || function () { (w[r].q = w[r].q || []).push(arguments) };
+    sm = document.createElement('script');
+    sm.type = 'text/javascript'; sm.async = true; sm.src = a;
+    s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(sm, s);
+  })(window, 'sm', ('https:' == document.location.protocol ? 'https://' : 'http://')
+    + 'app2.salesmanago.pl/static/sm.js');
+</script>
+<script>
+  function smGetItemValue(itemString, valueSeparator) {
+    return itemString.substring(itemString.indexOf(valueSeparator) + 1);
+  }
+
+  function smReadValueFromString(itemsString, requestedKey, itemSeparator, valueSeparator) {
+    var items = itemsString.split(itemSeparator);
+    for (var i = 0; i < items.length; i++) {
+      var itemString = items[i].trim();
+      if (itemString.startsWith(requestedKey))
+        return smGetItemValue(itemString, valueSeparator)
+    }
+    return "";
+  }
+
+  function smReadCookie(cookieName) {
+    return smReadValueFromString(document.cookie, cookieName, ";", "=");
+  }
+
+  var id = smReadCookie('smclient')
+  if (id.length > 0) {
+    var data = document.getElementById("salesmanagoIframe");
+    if (data !== null) {
+      var uuid = data.src + '?contactId=' + id;
+
+      var changeIframeSrc = function (iframe, src) {
+        var frame = iframe.cloneNode();
+        frame.src = src;
+        iframe.parentNode.replaceChild(frame, iframe);
+      };
+      changeIframeSrc(data, uuid)
+    }
+  }
+</script>
+
+<body>
+
+
+</body>
+
+</html>
