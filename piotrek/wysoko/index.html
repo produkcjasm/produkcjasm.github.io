@@ -18,12 +18,7 @@
     }
   </style>
 </head>
-<script>
-var frame = document.getElementById('your-frame-id'); 
 
-frame.contentWindow.postMessage('test', '*'); 
-
-</script>
 <script src="https://app2.salesmanago.pl/dynamic/36ah1dxt6fpehf53/popups.js"></script>
 
 <script type="text/javascript">
@@ -39,6 +34,13 @@ frame.contentWindow.postMessage('test', '*');
   })(window, 'sm', ('https:' == document.location.protocol ? 'https://' : 'http://')
     + 'app2.salesmanago.pl/static/sm.js');
 </script>
+
+<script>
+    var frame = document.getElementById('salesmanagoIframe'); 
+    
+    frame.contentWindow.postMessage('test', '*'); 
+    
+    </script>
 
 <body>
 
