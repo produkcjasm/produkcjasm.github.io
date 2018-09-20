@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="author" content="produkcjaSM">
   <title>Test funkcji na wysokości</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <style>
     * {
       margin: 0;
@@ -36,11 +37,17 @@
 </script>
 
 <script>
-    var frame = document.getElementById('salesmanagoIframe'); 
-    
-    frame.contentWindow.postMessage('test', '*'); 
-    
-    </script>
+  window.addEventListener('message', function (e) {
+    var $iframe = jQuery("#salesmanagoIframe");
+    var eventName = e.data[0];
+    var data = e.data[1];
+    switch (eventName) {
+      case 'setHeight':
+        $iframe.height(data);
+        break;
+    }
+  }, false);
+</script>
 
 <body>
 
