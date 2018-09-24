@@ -64,7 +64,12 @@
 <script>
 var iframes = iFrameResize('#salesmanagoIframe');
 
-iFrameResize({log:false}, '#salesmanagoIframe')</script>
+iFrameResize({log:false}, '#salesmanagoIframe')
+
+window.addEventListener('load', function () {
+  iFrameResize({log:false}, '#salesmanagoIframe')
+})
+</script>
 
 <body>
 
