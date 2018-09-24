@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #000000;
+  background-color: #b2dffd;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -16,7 +16,7 @@ body {
 }
 
 .testing {
-  background-color: #ffffff;
+  background-color: #7c7c7c;
   width: 50vw;
   height: 50vh;
   font-family: 'Pirata One', cursive;
