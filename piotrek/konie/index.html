@@ -51,7 +51,7 @@
   window.addEventListener('load', function () {
     window.mobilecheck = function () {
       let check = false;
-      let iframeSales = document.getElementById('salesmanagoIframe').src;
+      // let iframeSales = document.getElementById('salesmanagoIframe').src;
       (function (a) {
         if (
           /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i
@@ -63,10 +63,10 @@
     };
 
     if (window.mobilecheck() === false) {
-      iframeSales = "https://app2.emlgrid.com/ms/36ah1dxt6fpehf53/default/pedza_konie_po_betonie.htm"
+      document.getElementById('salesmanagoIframe').src = "https://app2.emlgrid.com/ms/36ah1dxt6fpehf53/default/pedza_konie_po_betonie.htm"
       console.log('1')
     } else {name
-      iframeSales = "https://app2.emlgrid.com/ms/36ah1dxt6fpehf53/default/w_szarej_mgle.htm";
+      document.getElementById('salesmanagoIframe').src = "https://app2.emlgrid.com/ms/36ah1dxt6fpehf53/default/w_szarej_mgle.htm";
       console.log('2')
     }
   });
