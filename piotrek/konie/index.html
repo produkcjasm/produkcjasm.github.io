@@ -62,10 +62,10 @@
       return check;
     };
 
-    if (window.mobilecheck() === false) {
+    if (window.mobilecheck() === false && document.getElementById('salesmanagoIframe').src === "https://app2.emlgrid.com/ms/36ah1dxt6fpehf53/default/pedza_konie_po_betonie.htm") {
       document.getElementById('salesmanagoIframe').src = "https://app2.emlgrid.com/ms/36ah1dxt6fpehf53/default/pedza_konie_po_betonie.htm"
       console.log('1')
-    } else {name
+    } else if (window.mobilecheck() === true && document.getElementById('salesmanagoIframe').src === "https://app2.emlgrid.com/ms/36ah1dxt6fpehf53/default/pedza_konie_po_betonie.htm") {
       document.getElementById('salesmanagoIframe').src = "https://app2.emlgrid.com/ms/36ah1dxt6fpehf53/default/w_szarej_mgle.htm";
       console.log('2')
     }
