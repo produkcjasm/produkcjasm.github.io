@@ -5,9 +5,212 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>AGNIESZKA</title>
-</head>
-<body onLoad="smFormIdUpdate()" style="background-color: blue; height: 1000px;">
-          <script src="https://app2.salesmanago.pl/dynamic/36ah1dxt6fpehf53/popups.js"></script>
+<style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Roboto Condensed, Roboto, sans-serif;
+            /*overflow: hidden;*/
+        }
+
+        #content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 1.15em;
+            text-align: center;
+            margin: 0;
+            padding-top: 20px;
+        }
+
+        header {
+            width: 90%;
+        }
+
+        header>p {
+            font-size: 1.15em;
+            color: #221f1f;
+            text-align: center;
+            margin: 0;
+            padding: 10px 0 40px 0;
+        }
+
+        #wrapper {
+            width: 90%;
+            display: flex;
+            text-align: justify;
+            background-color: #f6f6f6;
+        }
+
+        #box-left {
+            width: 50%;
+            font-size: 0.8em;
+            padding: 30px;
+        }
+
+        box-left>p {
+            padding-bottom: 10px;
+        }
+
+        #box-right {
+            width: 50%;
+            font-size: 0.9em;
+            padding: 30px;
+        }
+
+        h2 {
+            font-size: 1.15em;
+        }
+
+        input[type="email"] {
+            display: block;
+            margin: 30px auto;
+            height: 38px;
+            border: 1px solid #d3a035;
+            color: #767676;
+            padding-left: 10px;
+        }
+
+        .consents {
+            display: flex;
+            padding: 10px;
+        }
+
+        .checkbox-text {
+            padding: 0 10px;
+            margin: 0;
+        }
+
+        #consent {
+            padding: 10px 80px;
+            text-align: left;
+            font-size: 0.8em;
+        }
+
+        span>a {
+            color: #d3a035;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #button {
+            text-align: right;
+            padding: 10px;
+        }
+
+        input[type="submit"] {
+            width: 200px;
+            height: 38px;
+            background-color: #d3a035;
+            color: #fff;
+            font-size: 1.15em;
+            border: 1px solid transparent;
+        }
         
+        #sm-cst.zgoda1, #sm-cst.zgoda2, #sm-cst.zgoda3, #sm-cst.zgoda4 {
+            width: 30px;
+            height: 30px;
+        }
+
+
+
+        @media all and (max-width: 830px) {
+
+            * {
+                font-size: 12px;
+            }
+
+            input[type="checkbox"] {
+                -webkit-transform: scale(1.5, 1.5);
+            }
+
+            #consent {
+                padding: 10px 50px;
+            }
+        }
+
+
+
+        @media all and (max-width: 660px) {
+            #wrapper {
+                flex-direction: column;
+            }
+
+            #box-left,
+            #box-right {
+                width: 100%;
+            }
+
+            #button {
+                text-align: center;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <h1>Bądź na bieżąco z najnowszymi informacjami i promocjami Mennicy Polskiej.</h1>
+            <p>Jeśli chcesz otrzymywać newsletter przejdź do formularza, zapoznaj się z regulaminem i wyraź swoją zgodę.</p>
+        </header>
+        <div id="wrapper">
+            <div id="box-left">
+                <p>1) Administratorem podanych danych osobowych jest Mennica Polska od 1766 Sp. z o.o. (&bdquo;MPod1766&rdquo;) z siedzibą w Warszawie (00-854), Al. Jana Pawła II 23.</p>
+                <p>2) Twoje dane osobowe będziemy przetwarzać w celach marketingowych, w szczeg&oacute;lności wysyłania newslettera MPod1766 na podstawie udzielonej przez Ciebie zgody (art. 6 ust. 1 lit. a) RODO).</p>
+                <p>3) Ponadto Twoje dane osobowe mogą być przetwarzane w celu udowodnienia, że nasze działania marketingowe wobec Ciebie były zgodne z prawem, tj. w celu obrony przed roszczeniami &ndash; kt&oacute;ry to cel wynika z realizacji prawnie uzasadnionych interes&oacute;w MPod1766 (art. 6 ust. 1 lit. f) RODO).</p>
+                <p>4) Podanie danych jest dobrowolne, ale konieczne w celu subskrybcji newslettera MPod1766.</p>
+                <p>5) Twoje dane osobowe mogą być przekazywane innym podmiotom wsp&oacute;łpracującym z MPod1766 w zakresie i w celu, w jakim korzystamy ze wsparcia tych podmiot&oacute;w w obszarze obsługi IT oraz prowadzenia wysyłki newslettera &ndash; a w przypadkach, gdy prawo tego wymaga, r&oacute;wnież organom władzy państwowej (włączając w to wszelkiego rodzaju organy, sądy i urzędy).</p>
+                <p>6) Twoje dane osobowe będą przechowywane przez nas do momentu zgłoszenia przez Ciebie sprzeciwu wobec przetwarzania twoich danych na potrzeby marketingu bezpośredniego albo do momentu wycofania przez Ciebie zgody na przetwarzanie danych, a po tym momencie przez okres 4 lat.</p>
+                <p>7) Masz prawo dostępu do Twoich danych osobowych, ich sprostowania, usunięcia lub ograniczenia przetwarzania, prawo do przenoszenia danych oraz prawo wniesienia skargi do organu nadzorczego, w szczeg&oacute;lności w państwie swojego zwykłego pobytu, swojego miejsca pracy lub miejsca popełnienia domniemanego naruszenia.</p>
+                <p>8) Twoje dane osobowe będą przetwarzane dla tworzenia profili w celu jak najlepszego dostosowania do Twoich oczekiwań kierowanych do Ciebie materiał&oacute;w. Na podstawie profili nie będą podejmowanie żadne automatyczne decyzje dotyczące Ciebie, kt&oacute;re wywoływałyby wobec Ciebie skutki prawne lub w podobny spos&oacute;b istotnie na Ciebie wpływały.</p>
+                <p>9) Masz prawo do wniesienia sprzeciwu w związku z przetwarzaniem Twoich danych na potrzeby marketingowe, w tym profilowania.</p>
+                <p>10) Masz prawo do wniesienia sprzeciwu z przyczyn związanych z Twoją szczeg&oacute;lną sytuacją wobec przetwarzania Twoich danych w celu wynikającym z realizacji prawnie uzasadnionych interes&oacute;w MPod1766.</p>
+                <p>11) Możesz skontaktować się z naszym inspektorem ochrony danych osobowych na adres korespondencyjny MPod1766 lub wysyłając wiadomość na adres poczty elektronicznej: <span><a href="mailto:iod@mennica.com.pl" target="_blank">iod@mennica.com.pl</a></span>.</p>
+                <p>12) W każdej chwili masz prawo wycofać zgodę na przetwarzanie swoich danych osobowych w zakresie w jakiej jej udzieliłeś. Cofnięcie zgody nie będzie miało wpływu na przetwarzanie, kt&oacute;rego dokonano na podstawie Twojej zgody przed jej cofnięciem. Wycofanie zgody można dokonać wysyłając wiadomość na adres: <span><a href="mailto:info_newsletter@mennica.com.pl" target="_blank">info_newsletter@mennica.com.pl</a></span>.</p>
+            </div>
+            <div id="box-right">
+                <form action="" method="post">
+                    <h2>Podaj adres e-mail i zapoznaj się ze zgodami niezbędnymi do otrzymywania newslettera.</h2>
+                    <input type="email" id="sm-form-email" name="sm-form-email" placeholder="Wpisz sw&oacute;j adres e-mail" required="required" />
+                    <div class="consents"><input type="checkbox" id="sm-cst.zgoda1" name="sm-cst.zgoda1" required="required" />
+                        <p class="checkbox-text">* Wyrażam zgodę na przetwarzanie moich danych osobowych tj. adresu e-mail oraz adresu IP przez MPod1766 w celach marketingowych, w szczeg&oacute;lności w celu wysyłania do mnie newslettera MPod1766. Wyrażenie zgody jest dobrowolne.</p>
+                    </div>
+                    <div class="consents"><input type="checkbox" id="sm-cst.zgoda2" name="sm-cst.zgoda2" required="required" />
+                        <p class="checkbox-text">* Wyrażam zgodę na otrzymywanie informacji handlowej od MPod1766 za pomocą środk&oacute;w komunikacji elektronicznej na wskazany przeze mnie adres poczty elektronicznej. Wyrażenie zgody jest dobrowolne.</p>
+                    </div>
+                    <div class="consents"><input type="checkbox" id="sm-cst.zgoda3" name="sm-cst.zgoda3" required="required" />
+                        <p class="checkbox-text">* Wyrażam zgodę na wykorzystanie automatycznych system&oacute;w wywołujących i telekomunikacyjnych urządzeń końcowych w celu marketingowym. Wyrażenie zgody jest dobrowolne.</p>
+                    </div>
+                    <div class="consents"><input type="checkbox" id="sm-cst.zgoda4" name="sm-cst.zgoda4" required="required" />
+                        <p class="checkbox-text">* Potwierdzam, że zapoznałem się z <span><a href="https://app2.emlgrid.com/ms/rd.htm?url=https%3A%2F%2Finwestycje.mennica.com.pl%2Fnewsletter-regulamin%3Futm_source%3Dsalesmanago%26utm_medium%3Dmicrosite%26utm_campaign%3Ddefault&amp;msid=ffc1fda2-2fbb-498e-ba75-768135a67456&amp;utm_medium=microsite&amp;utm_campaign=default&amp;vsid=xqku6or7xqjhyj1f&amp;taid=" target="_blank">Regulaminem serwisu i wysyłki newslettera Mennicy Polskiej od 1766 Sp. z o.o.</a></span></p>
+                    </div>
+                    <p id="consent">* wysyłka newslettera będzie możliwa tylko po zaznaczeniu wszystkich czterech p&oacute;l oznaczonych gwiazdką</p>
+                    <div id="button"><input name="sm-form-submit" id="sm-form-submit" value="Zapisz" onclick="validateForm('contact.htm', event, 0);" type="submit" /></div>
+                </form>
+            </div>
+        </div>
+    </div>
+  
+  <script src="https://app2.salesmanago.pl/dynamic/36ah1dxt6fpehf53/popups.js"></script>
+  <script type="text/javascript">
+    var _smid = "36ah1dxt6fpehf53";
+    (function(w, r, a, sm, s ) {
+        w['SalesmanagoObject'] = r;
+        w[r] = w[r] || function () {( w[r].q = w[r].q || [] ).push(arguments)};
+        sm = document.createElement('script'); sm.type = 'text/javascript'; sm.async = true; sm.src = a;
+        s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(sm, s);
+    })(window, 'sm', ('https:' == document.location.protocol ? 'https://' : 'http://') + 'app2.salesmanago.pl/static/sm.js');
+</script>
 </body>
 </html>
