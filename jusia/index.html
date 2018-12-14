@@ -83,20 +83,29 @@ window.addEventListener('load', function () {
     <script type="text/javascript" async>
   let formContact = document.getElementById('salesmanagoIframe');
   let formBtn = document.getElementById('display_form');
+  let closeBtnpopup = document.querySelector('.closeBtnpopup');
+      let dimm = document.getElementById('dimmer');
   formBtn.addEventListener("click", function(){
     formContact.style.transition = "top 0.6s";
     formContact.style.top="50px";
     
   });
+       closeBtnpopup.addEventListener("click", function(){
+    formContact.style.transition = "top 0.6s";
+    formContact.style.top="-1000px";
+    dimm.style.display="none";
+  });
       
       function dim(bool)
 {
     if (typeof bool=='undefined') bool=true; // so you can shorten dim(true) to dim()
-    document.getElementById('dimmer').style.display=(bool?'block':'none');
+    dimm.style.display=(bool?'block':'none');
 }    
 
 dim(true); // on
 dim(false); // off
+      
+      
   </script>
   </body>
 </html>
