@@ -13,6 +13,19 @@
   height:50px;
     background-color:red;
     color:white;}
+    
+    #dimmer
+{
+    background:#000;
+    opacity:0.5;
+    position:fixed; /* important to use fixed, not absolute */
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:none;
+    z-index:9999; /* may not be necessary */
+}
   </style>
 <body  style="background-color: rgb(51, 114, 26); height: 1000px;">
   
@@ -65,7 +78,8 @@ window.addEventListener('load', function () {
         
   <iframe id="salesmanagoIframe" style="margin: 0; padding: 0; width:100%;left: 50%; transform: translateX(-50%); height:474px;top:-1000px;position:absolute; overflow-y:hidden; overflow-x:hidden; border:none; background:transparent;" src="https://app2.emlgrid.com/cf/36ah1dxt6fpehf53/form_14122018.htm"></iframe>
 
-  <button type="button" value="display form" id="display_form">
+  <button type="button" onclick="dim();" value="display form" id="display_form"> </button>
+  <div id="dimmer"></div> 
     <script type="text/javascript" async>
   let formContact = document.getElementById('salesmanagoIframe');
   let formBtn = document.getElementById('display_form');
@@ -74,6 +88,15 @@ window.addEventListener('load', function () {
     formContact.style.top="50px";
     
   });
+      
+      function dim(bool)
+{
+    if (typeof bool=='undefined') bool=true; // so you can shorten dim(true) to dim()
+    document.getElementById('dimmer').style.display=(bool?'block':'none');
+}    
+
+dim(true); // on
+dim(false); // off
   </script>
   </body>
 </html>
