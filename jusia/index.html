@@ -69,8 +69,10 @@ window.addEventListener('load', function () {
     <script type="text/javascript" async>
   let formContact = document.getElementById('salesmanagoIframe');
   let formBtn = document.getElementById('display_form');
-  formBtn.addEventListener("click", function(){ 
+  formBtn.addEventListener("click", function(){
+    formContact.style.transition = "top 1s";
     formContact.style.top="100px";
+    
   });
   </script>
   </body>
