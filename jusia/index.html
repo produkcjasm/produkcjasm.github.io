@@ -26,13 +26,18 @@
     display:none;
     z-index:9999; /* may not be necessary */
 }
+    
+    #modalDiv{
+      width:100%;left: 50%; z-index:9999999; transform: translateX(-50%); height:474px;top:-1000px;position:absolute;
+      
+    }
   </style>
 <body  style="background-color: rgb(51, 114, 26); height: 1000px;">
   
   
 <script>
   window.addEventListener('message', function (e) {
-    var $iframe = jQuery("#salesmanagoIframe");
+    var $iframe = jQuery("#modalDiv");
     var eventName = e.data[0];
     var data = e.data[1];
     switch (eventName) {
@@ -54,12 +59,12 @@
 //# sourceMappingURL=iframeResizer.map
 </script>
   <script>
-var iframes = iFrameResize('#salesmanagoIframe');
+var iframes = iFrameResize('#modalDiv');
 
-iFrameResize({log:false}, '#salesmanagoIframe')
+iFrameResize({log:false}, '#modalDiv')
 
 window.addEventListener('load', function () {
-  iFrameResize({log:false}, '#salesmanagoIframe')
+  iFrameResize({log:false}, '#modalDiv')
 })
 </script>
       
@@ -74,14 +79,14 @@ window.addEventListener('load', function () {
         s.parentNode.insertBefore(sm, s);
     })(window, 'sm', ('https:' == document.location.protocol ? 'https://' : 'http://') + 'app2.salesmanago.pl/static/sm.js');
 </script>
-
+<div id="modalDiv">
   <div id="closeBtnPop"><img src="https://s3-eu-west-1.amazonaws.com/salesmanagoimg/36ah1dxt6fpehf53/bz0skjq3it4c2v3k/t6cd1eqcmnyamrij.png"/> </div>  
-  <iframe id="salesmanagoIframe" style="margin: 0; padding: 0; width:100%;left: 50%; z-index:9999999; transform: translateX(-50%); height:474px;top:-1000px;position:absolute; overflow-y:hidden; overflow-x:hidden; border:none; background:transparent;" src="https://app2.emlgrid.com/cf/36ah1dxt6fpehf53/form_14122018.htm"></iframe>
-
+  <iframe id="salesmanagoIframe" style="margin: 0; padding: 0; width:100%; height:auto;top:0px; overflow-y:hidden; overflow-x:hidden; border:none; background:transparent;" src="https://app2.emlgrid.com/cf/36ah1dxt6fpehf53/form_14122018.htm"></iframe>
+  </div>
   <button type="button" onclick="dim();" value="display form" id="display_form"> </button>
   <div id="dimmer"></div> 
     <script type="text/javascript" async>
-  let formContact = document.getElementById('salesmanagoIframe');
+  let formContact = document.getElementById('modalDiv');
   let formBtn = document.getElementById('display_form');
   let closeBtnPopup = document.getElementById('closeBtnPop');
       let dimm = document.getElementById('dimmer');
