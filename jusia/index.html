@@ -119,7 +119,11 @@ window.addEventListener('load', function () {
 
 dim(true); // on
 dim(false); // off
-      
+   
+      var myIframe = document.getElementById('modalDiv');
+myIframe.onload = function () {
+    myIframe.contentWindow.scrollTo(xcoord,ycoord);
+}
       
   </script>
   </body>
