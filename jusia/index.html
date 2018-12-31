@@ -95,19 +95,21 @@ window.addEventListener('load', function () {
   let formBtn = document.getElementById('display_form');
   let closeBtnPopup = document.getElementById('closeBtnPop');
       let dimm = document.getElementById('dimmer');
+      
+      
   formBtn.addEventListener("click", function(){
-    formContact.style.transition = "top 0.6s";
+    formContact.style.transition = "top";
     formContact.style.top="50px";
     
   });
        closeBtnPopup.addEventListener("click", function(){
-    formContact.style.transition = "top 0.6s";
+    formContact.style.transition = "top";
     formContact.style.top="-1000px";
     dimm.style.display="none";
   });
       
        dimm.addEventListener("click", function(){
-    formContact.style.transition = "top 0.6s";
+    formContact.style.transition = "top";
     formContact.style.top="-1000px";
     dimm.style.display="none";
   });
