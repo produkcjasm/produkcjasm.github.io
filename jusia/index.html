@@ -101,21 +101,21 @@ window.addEventListener('load', function () {
     setTimeout(function(){  
     formContact.style.top="50px";
     formContact.style.position="fixed";
-      }, 500);
+      }, 100);
     
   });
        closeBtnPopup.addEventListener("click", function(){
          setTimeout(function(){  
     formContact.style.top="-1000px";
     dimm.style.display="none";
-         }, 500);
+         }, 100);
   });
       
        dimm.addEventListener("click", function(){
          setTimeout(function(){  
     formContact.style.top="-1000px";
     dimm.style.display="none";
-         }, 500);
+         }, 100);
   });
       
       function dim(bool)
@@ -123,7 +123,7 @@ window.addEventListener('load', function () {
     if (typeof bool=='undefined') bool=true; // so you can shorten dim(true) to dim()
     setTimeout(function(){  
     dimm.style.display=(bool?'block':'none');
-}, 500);
+}, 100);
   
 }    
 
