@@ -123,15 +123,11 @@ window.addEventListener('load', function () {
 dim(true); // on
 dim(false); // off
    
-
-
-var parentWindow = document.getElementById('salesmanagoIframe');;
 var btn = document.getElementById('display_form');
-var url = 'https://app2.salesmanago.pl';
 if(btn){
 btn.addEventListener('click', function () {
-  var testDawid=document.getElementById('salesmanagoIframe') 
-  testDawid.contentWindow.postMessage('SM_REFRESH','*')
+  var closeMethod=document.getElementById('salesmanagoIframe') 
+  closeMethod.contentWindow.postMessage('SM_REFRESH','*')
 });}
 
 
