@@ -116,9 +116,7 @@ window.addEventListener('load', function () {
 {
     if (typeof bool=='undefined') bool=true; // so you can shorten dim(true) to dim()
     dimm.style.display=(bool?'block':'none');
-  var parentWindow = document.getElementById('salesmanagoIframe');
-    var url = 'https://app2.salesmanago.pl';
-    parentWindow.postMessage('SM_REFRESH', url);
+
   
 }    
 
@@ -126,7 +124,16 @@ dim(true); // on
 dim(false); // off
    
 
-      
+
+var parentWindow = document.getElementById('salesmanagoIframe');;
+var btn = document.getElementById('display_form');
+var url = 'https://app2.salesmanago.pl';
+if(btn){
+btn.addEventListener('click', function () {
+    parentWindow.postMessage('SM_AUTO_CLOSE', url);
+});}
+
+
 
       
   </script>
