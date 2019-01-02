@@ -130,7 +130,8 @@ var btn = document.getElementById('display_form');
 var url = 'https://app2.salesmanago.pl';
 if(btn){
 btn.addEventListener('click', function () {
-    window.postMessage('SM_AUTO_CLOSE', url);
+  var testDawid=document.getElementById('salesmanagoIframe') 
+  testDawid.contentWindow.postMessage('SM_REFRESH','*')
 });}
 
 
