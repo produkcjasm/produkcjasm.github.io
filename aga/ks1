@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>pmsa-1</title>
+<style>
+@media all and (max-width: 1199px) {
+#salesmanagoIframeKSRWD {
+height: 456px !important;
+}
+}
+
+@media all and (max-width: 979px) {
+#salesmanagoIframeKSRWD {
+height: 409px !important;
+}
+}
+
+@media all and (max-width: 766px) {
+#salesmanagoIframeKSRWD {
+height: 515px !important;
+}
+}
+@media all and (max-width: 478px) {
+#salesmanagoIframeKSRWD {
+height: 409px !important;
+}
+}
+</style>
+
+</head>
+
+<body onLoad="smFormIdUpdate()" style="background-color: blue; height: 1000px;">
+
+<iframe id="salesmanagoIframeKSRWD" style="margin: 0; padding: 0; width:100%; height:515px; overflow-y:hidden; overflow-x:hidden; border:none; background:#ffffff;max-width:100%;" src="https://app2.emlgrid.com/ms/36ah1dxt6fpehf53/default/kasa_stefczyka-aga.htm"></iframe>
+  </body>
+</html>
