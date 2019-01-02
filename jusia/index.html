@@ -105,20 +105,25 @@ window.addEventListener('load', function () {
     
   });
        closeBtnPopup.addEventListener("click", function(){
+         setTimeout(function(){  
     formContact.style.top="-1000px";
     dimm.style.display="none";
+         }, 500);
   });
       
        dimm.addEventListener("click", function(){
+         setTimeout(function(){  
     formContact.style.top="-1000px";
     dimm.style.display="none";
+         }, 500);
   });
       
       function dim(bool)
 {
     if (typeof bool=='undefined') bool=true; // so you can shorten dim(true) to dim()
+    setTimeout(function(){  
     dimm.style.display=(bool?'block':'none');
-
+}, 500);
   
 }    
 
