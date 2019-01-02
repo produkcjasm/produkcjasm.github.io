@@ -94,28 +94,29 @@ window.addEventListener('load', function () {
   let formContact = document.getElementById('modalDiv');
   let formBtn = document.getElementById('display_form');
   let closeBtnPopup = document.getElementById('closeBtnPop');
-      let dimm = document.getElementById('dimmer');
+  let dimm = document.getElementById('dimmer');
+      let defaultSetTime = 200;
       
       
   formBtn.addEventListener("click", function(){
     setTimeout(function(){  
     formContact.style.top="50px";
     formContact.style.position="fixed";
-      }, 100);
+      }, defaultSetTime);
     
   });
        closeBtnPopup.addEventListener("click", function(){
          setTimeout(function(){  
     formContact.style.top="-1000px";
     dimm.style.display="none";
-         }, 100);
+         }, defaultSetTime);
   });
       
        dimm.addEventListener("click", function(){
          setTimeout(function(){  
     formContact.style.top="-1000px";
     dimm.style.display="none";
-         }, 100);
+         }, defaultSetTime);
   });
       
       function dim(bool)
@@ -123,7 +124,7 @@ window.addEventListener('load', function () {
     if (typeof bool=='undefined') bool=true; // so you can shorten dim(true) to dim()
     setTimeout(function(){  
     dimm.style.display=(bool?'block':'none');
-}, 100);
+}, defaultSetTime);
   
 }    
 
