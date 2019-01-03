@@ -137,6 +137,19 @@ btn.addEventListener('click', function () {
   var closeMethod=document.getElementById('salesmanagoIframe') 
   closeMethod.contentWindow.postMessage('SM_REFRESH','*')
 });}
+      
+     let closeBtnPopup = document.getElementById('closeBtnPop');
+     let dimm = document.getElementById('dimmer');
+if(closeBtnPopup){
+closeBtnPopup.addEventListener('click', function () {
+  var closeMethod=document.getElementById('salesmanagoIframe') 
+  closeMethod.contentWindow.postMessage('SM_REFRESH','*')
+});}
+      if(dimm){
+dimm.addEventListener('click', function () {
+  var closeMethod=document.getElementById('salesmanagoIframe') 
+  closeMethod.contentWindow.postMessage('SM_REFRESH','*')
+});}
      
   </script>
   
