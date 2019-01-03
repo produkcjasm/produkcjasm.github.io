@@ -138,19 +138,19 @@ dim(false); // off
             closeMethod.contentWindow.postMessage('SM_REFRESH','*')
             });}
       
-            let closeBtnPopup = document.getElementById('closeBtnPop');
-            let dimm = document.getElementById('dimmer');
+            let closeBtnPopupRf = document.getElementById('closeBtnPop');
+            let dimmRefr = document.getElementById('dimmer');
       
-      if(closeBtnPopup){
-            closeBtnPopup.addEventListener('click', function () {
-            var closeMethod=document.getElementById('salesmanagoIframe') 
-            closeMethod.contentWindow.postMessage('SM_REFRESH','*')
+      if(closeBtnPopupRf){
+            closeBtnPopupRf.addEventListener('click', function () {
+            var closeMethodRf=document.getElementById('salesmanagoIframe') 
+            closeMethodRf.contentWindow.postMessage('SM_REFRESH','*')
             });}
       
-      if(dimm){
-            dimm.addEventListener('click', function () {
-            var closeMethod=document.getElementById('salesmanagoIframe') 
-            closeMethod.contentWindow.postMessage('SM_REFRESH','*')
+      if(dimmRefr){
+            dimmRefr.addEventListener('click', function () {
+            var closeMethodRefr=document.getElementById('salesmanagoIframe') 
+            closeMethodRefr.contentWindow.postMessage('SM_REFRESH','*')
             });}
      
   </script>
