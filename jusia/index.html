@@ -8,14 +8,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
   <style>
+    
   button{
-  width:200px;
-  height:50px;
+    width:200px;
+    height:50px;
     background-color:red;
-    color:white;}
+    color:white;
+    }
     
     #dimmer
-{
+    {
     background:#000;
     opacity:0.5;
     position:fixed; /* important to use fixed, not absolute */
@@ -25,7 +27,8 @@
     height:100%;
     display:none;
     z-index:9999; /* may not be necessary */
-}
+    }
+    
     #closeBtnPop {
     position: absolute;
     top: 10px;
@@ -33,17 +36,21 @@
     }
     
     #modalDiv{
-      max-width:757px; width:100%;left: 50%; z-index:9999999; transform: translateX(-50%); top:-1000px;position:absolute;
-      
+    max-width:757px; width:100%;left: 50%; z-index:9999999; transform: translateX(-50%); top:-1000px;position:absolute;  
     }
+    
   </style>
+  
 <body  style="background-color: rgb(51, 114, 26); height: 1000px;">
   <div id="modalDiv">
-  <div id="closeBtnPop"><img src="https://s3-eu-west-1.amazonaws.com/salesmanagoimg/36ah1dxt6fpehf53/bz0skjq3it4c2v3k/t6cd1eqcmnyamrij.png"/> </div>  
-  <iframe id="salesmanagoIframe" style="margin: 0; padding: 0; width:100%;height:474px; top:0px; overflow-y:hidden; overflow-x:hidden; border:none; background:transparent;" src="https://app2.emlgrid.com/cf/36ah1dxt6fpehf53/form_14122018.htm"></iframe>
+    <div id="closeBtnPop">
+      <img src="https://s3-eu-west-1.amazonaws.com/salesmanagoimg/36ah1dxt6fpehf53/bz0skjq3it4c2v3k/t6cd1eqcmnyamrij.png"/> 
+    </div>  
+      <iframe id="salesmanagoIframe" style="margin: 0; padding: 0; width:100%;height:474px; top:0px; overflow-y:hidden; overflow-x:hidden; border:none; background:transparent;" src="https://app2.emlgrid.com/cf/36ah1dxt6fpehf53/form_14122018.htm"></iframe>
   </div>
-  <button type="button" onclick="dim();" value="display form" id="display_form">Wyświetl formularz</button>
-  <div id="dimmer"></div> 
+  
+<button type="button" onclick="dim();" value="display form" id="display_form">Wyświetl formularz</button>
+<div id="dimmer"></div> 
   
 <script>
   window.addEventListener('message', function (e) {
@@ -68,22 +75,17 @@
 //# sourceMappingURL=iframeResizer.map
 
 var iframes = iFrameResize('#salesmanagoIframe');
-
 iFrameResize({log:false}, '#salesmanagoIframe')
-
 window.addEventListener('load', function () {
-  iFrameResize({log:false}, '#salesmanagoIframe')
+iFrameResize({log:false}, '#salesmanagoIframe')
 })
 
-      
-
-
-    
+ 
   let formContact = document.getElementById('modalDiv');
   let formBtn = document.getElementById('display_form');
   let closeBtnPopup = document.getElementById('closeBtnPop');
   let dimm = document.getElementById('dimmer');
-      let defaultSetTime = 0;
+  let defaultSetTime = 0;
       
       
   formBtn.addEventListener("click", function(){
@@ -93,53 +95,51 @@ window.addEventListener('load', function () {
       }, defaultSetTime);
     
   });
-       closeBtnPopup.addEventListener("click", function(){
-         setTimeout(function(){  
-    formContact.style.top="-1000px";
-    dimm.style.display="none";
-         }, defaultSetTime);
+   closeBtnPopup.addEventListener("click", function(){
+   setTimeout(function(){  
+   formContact.style.top="-1000px";
+   dimm.style.display="none";
+      }, defaultSetTime);
   });
       
-       /* dimm.addEventListener("click", function(){
-         setTimeout(function(){  
+ /* dimm.addEventListener("click", function(){
+    setTimeout(function(){  
     formContact.style.top="-1000px";
     dimm.style.display="none";
          }, defaultSetTime);
   }); */
       
-      function dim(bool)
-{
+    function dim(bool){
     if (typeof bool=='undefined') bool=true; // so you can shorten dim(true) to dim()
     setTimeout(function(){  
     dimm.style.display=(bool?'block':'none');
-}, defaultSetTime);
-  
-}    
+    }, defaultSetTime);
+    }    
 
-dim(true); // on
-dim(false); // off
+    dim(true); // on
+    dim(false); // off
    
-            var btn = document.getElementById('display_form');
-      if(btn){
-            btn.addEventListener('click', function () {
-            var closeMethod=document.getElementById('salesmanagoIframe') 
-            closeMethod.contentWindow.postMessage('SM_REFRESH','*')
-            });}
+    var btn = document.getElementById('display_form');
+    if(btn){
+    btn.addEventListener('click', function () {
+    var closeMethod=document.getElementById('salesmanagoIframe') 
+    closeMethod.contentWindow.postMessage('SM_REFRESH','*')
+    });}
       
-            let closeBtnPopupRf = document.getElementById('closeBtnPop');
-            let dimmRefr = document.getElementById('dimmer');
+    let closeBtnPopupRf = document.getElementById('closeBtnPop');
+    let dimmRefr = document.getElementById('dimmer');
       
-      if(closeBtnPopupRf){
-            closeBtnPopupRf.addEventListener('click', function () {
-            var closeMethodRf=document.getElementById('salesmanagoIframe') 
-            closeMethodRf.contentWindow.postMessage('SM_REFRESH','*')
-            });}
+    if(closeBtnPopupRf){
+    closeBtnPopupRf.addEventListener('click', function () {
+    var closeMethodRf=document.getElementById('salesmanagoIframe') 
+    closeMethodRf.contentWindow.postMessage('SM_REFRESH','*')
+    });}
       
-      /*if(dimmRefr){
-            dimmRefr.addEventListener('click', function () {
-            var closeMethodRefr=document.getElementById('salesmanagoIframe') 
-            closeMethodRefr.contentWindow.postMessage('SM_REFRESH','*')
-            });}*/
+    /*if(dimmRefr){
+    dimmRefr.addEventListener('click', function () {
+    var closeMethodRefr=document.getElementById('salesmanagoIframe') 
+    closeMethodRefr.contentWindow.postMessage('SM_REFRESH','*')
+    });}*/
      
   </script>
   
