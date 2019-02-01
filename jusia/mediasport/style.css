@@ -27,7 +27,7 @@ p{
 }
 
 .wrapper {
-  background-image: url('ostatni.jpg');
+  background-image: url('https://s3-eu-west-1.amazonaws.com/salesmanagoimg/36ah1dxt6fpehf53/bz0skjq3it4c2v3k/ypxk4ti1zbcyg8lt.jpg');
   background-color: #848484;
   background-position: top right;
   background-size: cover;
@@ -52,7 +52,7 @@ p{
   background-color: rgb(255,255,255);
 }
 ul {
-  list-style-image: url('fajka14_02.png');
+  list-style-image: url('https://s3-eu-west-1.amazonaws.com/salesmanagoimg/36ah1dxt6fpehf53/bz0skjq3it4c2v3k/uy3tmey5jwxvli99.png');
 }
 
 li{
@@ -136,7 +136,7 @@ label{
 
 @media only screen and (max-width: 800px) {
   .wrapper {
-    background-image: url('images/paniszara600_02.png');
+    background-image: url('https://s3-eu-west-1.amazonaws.com/salesmanagoimg/36ah1dxt6fpehf53/bz0skjq3it4c2v3k/fylpffnkuvs8bqpx.png');
     background-position: bottom center;
     background-color: white;
   }
@@ -144,7 +144,7 @@ label{
 
 @media only screen and (max-width: 600px) {
   .wrapper {
-    background-image: url('images/paniszara460_02.png');
+    background-image: url('https://s3-eu-west-1.amazonaws.com/salesmanagoimg/36ah1dxt6fpehf53/bz0skjq3it4c2v3k/0j0rf30ccunsu9z7.png');
   }
 }
 
