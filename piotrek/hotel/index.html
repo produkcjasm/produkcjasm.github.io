@@ -21,7 +21,47 @@
   <style>iframe{width: 1px;min-width: 100%;}</style>
 </head>
 <iframe id="salesmanagoIframe" style="margin: 0; padding: 0; width:100%; height:500px; overflow-y:hidden; overflow-x:hidden; border:none; background:#ffffff;" src="https://app2.emlgrid.com/cf/36ah1dxt6fpehf53/hotelAzyl.htm"></iframe>
+<script>
+  var _smid = "ea6txiiv4ifphwmx";
+var _smformid = "SIDEBAR_ZG_NEW_ZMIANY";
+var _smformcfg = {
+  'formId': '',
+  'side': 'right',
+  'width': '240',
+  'height': '360',
+  'borderColor': '#ffffff',
+  'backgroundColor': '#ffffff',
+  'imageBackground': '#ffffff',
+  'imageUrl': 'https://s3-eu-west-1.amazonaws.com/salesmanagoimg/36ah1dxt6fpehf53/bz0skjq3it4c2v3k/5o7mxy6ai7tf7t4x.png',
+  'imgWidth': '40',
+  'imgHeight': '360',
+  'bannedIdentified': 'false',
+  'codeType': 'sidebar',
+  'dynamic': 'false',
+  'countPageViews': true,
+  'autoExpand': false
+};
+var x = document.getElementById("contentWrapper");
+var y = window.matchMedia("(max-width: 700px)");
 
+function myFunction(y) {
+  if (y.matches) {
+    console.log("nic tu nie ma ")
+  } else {
+    (function () {
+      (function () {
+        var smForm = document.createElement('script');
+        smForm.type = 'text/javascript';
+        smForm.async = true;
+        smForm.src = 'https://www.salesmanago.pl/static/smform.js';
+        var f = document.getElementsByTagName('script')[0];
+        f.parentNode.insertBefore(smForm, f);
+      })();
+    })();
+  }
+}
+myFunction(y)
+  </script>
 
 
 <script type="text/javascript">
