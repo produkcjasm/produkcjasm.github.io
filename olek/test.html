@@ -1,1 +1,255 @@
 
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+              integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+              crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Lato', sans-serif;
+                color: #fff;
+            }
+
+            .wrapper {
+                display: flex;
+                max-width: 940px;
+                height: 370px;
+                margin: 0;
+            }
+
+            .container {
+                width: 448px;
+                max-width: 448px;
+                height: 370px;
+                margin: 14px 0 0 14px;
+            }
+
+            .container-photo {
+                height: 190px;
+                position: relative;
+                margin-right: 30px;
+                
+            }
+            .container-photo img{
+                height: 190px; 
+                margin-right: 30px;
+                
+            }
+            .container-photo p{
+                position: absolute;
+                top: 60px;
+                left: 30%;
+            }
+
+
+            p {
+                font-size: 20px;
+                font-weight: bold;
+                text-transform: uppercase;
+                margin-right: 20px;
+                margin-bottom: 20px;
+            }
+
+            p span {
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+            .container-info {
+                height: 180px;
+                background-color: #fff;
+
+            }
+
+            .info {
+                height: 100px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .info p {
+                width: 50%;
+                font-size: 14px;
+                margin: 20px 10px 0 20px;
+                text-transform: none;
+                color: #00aeef;
+            }
+
+            .info i {
+                color: #000;
+                margin-right: 10px;
+            }
+
+            .info span {
+                font-size: 14px;
+                color: #8d8d8d;
+
+            }
+
+            .info .study {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                width: 85%;
+            }
+
+            .info .study p {
+                text-align: right;
+                width: 65%;
+            }
+
+
+            button {
+                background-color: #00aeef;
+                border: none;
+                font-size: 12px;
+                padding: 16px 26px;
+                margin: 10px 0 0 20px;
+            }
+
+            @media (max-width: 850px) {
+                p {
+                    font-size: 14px;
+                  
+                }
+
+                .container {
+                    margin: 8px 4px 0 4px;
+                }
+            }
+
+            @media (max-width: 800px) {
+                p {
+                    width: 60%;
+                }
+
+                .info .study p {
+                    width: 100%;
+                }
+
+            }
+
+
+            @media (max-width: 600px) {
+                .wrapper {
+                    flex-direction: column;
+                    
+                }
+
+                .container {
+                    max-width: 537px;
+                    width: 100%;
+                    margin: 0 auto;
+                    padding: 10px;
+                    margin-bottom: 30px;
+
+                }
+
+                .container-photo {
+                    height: 160px;
+                    width: 100%;
+                }  
+                .container-photo img{
+                    height: 160px;
+                    width: 100%;
+                }
+
+                .container-info {
+                    height: 160px;
+
+                }
+
+                p {
+                    font-size: 20px;
+                    width: 65%;
+                }
+
+                .btn {
+                    display: flex;
+                    justify-content: center;
+                    
+                }
+
+                button {
+                    width: 85%;
+                    margin: 40px auto 0 auto;
+                }
+            }
+
+
+
+            @media (max-width: 450px) {
+                p {
+                    font-size: 18px;
+                }
+
+            }
+
+            @media (max-width: 400px) {
+                p {
+                    font-size: 16px;
+                }
+
+                .info {
+                    padding-top: 10px;
+                }
+            }
+
+            @media (max-width: 350px) {
+                p {
+                    font-size: 15px;
+                    width: 55%;
+                }
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+    <div class="container">
+        <div class="container-photo">
+            <img src="https://s3-eu-west-1.amazonaws.com/salesmanagoimg/36ah1dxt6fpehf53/bz0skjq3it4c2v3k/caqymt1wvnfotd5q.png" alt="">
+            <p>PSYCHOLOGIA POZYTYWNA W ORGANIZACJI </p>
+        </div>
+        <div class="container-info">
+            <div class="info">
+                <p><i class="fas fa-map-marker-alt"></i>Poznań</p>
+                <div class="study">
+                    <p><i class="fas fa-graduation-cap"></i>Studia<br/> <span>Studia podyplomowe</span></p>
+                </div>
+            </div>
+            <div class="btn">
+                <button>Czytaj więcej</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="container-photo">
+            <img src="https://s3-eu-west-1.amazonaws.com/salesmanagoimg/36ah1dxt6fpehf53/bz0skjq3it4c2v3k/caqymt1wvnfotd5q.png" alt="">
+            <p>${addedProds[1].name}</p>
+        </div>
+        <div class="container-info">
+            <div class="info">
+                <p><i class="fas fa-map-marker-alt"></i>${addedProds[0].detail1}</p>
+                <div class="study">
+                    <p><i class="fas fa-graduation-cap"></i>Studia<br/> <span>${addedProds[1].detail2}</span></p>
+                </div>
+            </div>
+            <div class="btn">
+                <button>Czytaj więcej</button>
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+    </html>
