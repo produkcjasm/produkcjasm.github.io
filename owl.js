@@ -3242,8 +3242,7 @@
                 return e.$ === w && (e.$ = Kt), t && e.jQuery === w && (e.jQuery = Jt), w
             }, t || (e.jQuery = e.$ = w), w
         });
-    </script>
-    <script>
+ 
         ;
         (function($, window, document, undefined) {
 
